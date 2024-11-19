@@ -1,4 +1,4 @@
-import counterStore from '../../store/counterStore.ts';
+import counterStore from '@/store/counterStore.ts';
 
 export default function Demo() {
 

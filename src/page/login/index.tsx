@@ -1,7 +1,7 @@
 import './index.scss';
 import React, {useState} from 'react';
 import {Button, Form, Input, message} from 'antd';
-import {login} from '../../api/test.ts';
+import {login} from '@/api/test.ts';
 import {useNavigate} from 'react-router-dom';
 
 type FieldType = {
