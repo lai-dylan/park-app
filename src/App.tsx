@@ -1,7 +1,7 @@
-import {RouterProvider} from 'react-router-dom';
-import {router} from './router';
-import {Suspense} from 'react';
-import {Spin} from 'antd';
+import {RouterProvider} from "react-router-dom";
+import {router} from "./router";
+import {Suspense} from "react";
+import {Spin} from "antd";
 
 function App() {
   return (

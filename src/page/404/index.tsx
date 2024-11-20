@@ -1,9 +1,9 @@
-import {Button, Empty, Typography} from 'antd';
-import {Link} from 'react-router-dom';
-import React from 'react';
+import {Button, Empty, Typography} from "antd";
+import {Link} from "react-router-dom";
+import React from "react";
 
 const NotFound: React.FC = () => {
-  return <div style={{marginTop: '300px'}}>
+  return <div style={{marginTop: "300px"}}>
 
     <Empty
       image="https://gw.alipayobjects.com/zos/antfincdn/ZHrcdLPrvN/empty.svg"
