@@ -1,7 +1,6 @@
 import React from "react";
-import {DownOutlined, UserOutlined, LogoutOutlined} from "@ant-design/icons";
-import {MenuProps, message} from "antd";
-import {Dropdown, Space} from "antd";
+import {DownOutlined, LogoutOutlined, UserOutlined} from "@ant-design/icons";
+import {Dropdown, MenuProps, message, Space} from "antd";
 
 
 const items: MenuProps["items"] = [
@@ -36,18 +35,18 @@ const onClick = ({key}: any) => {
 };
 
 const XHeader: React.FC = () => {
-  return <div style={{paddingRight: '20px', textAlign: "right"}}>
+  return <div style={{paddingRight: "20px", textAlign: "right"}}>
     <Dropdown menu={{items, onClick}}>
-    <a onClick={(e) => {
-      e.preventDefault();
-      console.log(e.target);
-    }}>
-      <Space>
-        欢迎👏🏻，{`Dylan`}
-        <DownOutlined/>
-      </Space>
-    </a>
-  </Dropdown>
+      <a onClick={(e) => {
+        e.preventDefault();
+        console.log(e.target);
+      }}>
+        <Space>
+          欢迎👏🏻，{`Dylan`}
+          <DownOutlined/>
+        </Space>
+      </a>
+    </Dropdown>
   </div>;
 };
 

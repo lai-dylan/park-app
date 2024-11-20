@@ -1,13 +1,18 @@
-import counterStore from "@/store/counterStore.ts";
+import "./index.css";
+import BearBox from "@/page/demo/components/bearBox.tsx";
 
 export default function Demo() {
 
-  const {counter, setCounter} = counterStore();
-
   return (
-    <div>
-      <button onClick={() => setCounter(10)}>加1</button>
-      <p>{counter}</p>
+    <div className="container">
+      <div>
+        <BearBox/>
+        <BearBox/>
+        <BearBox/>
+      </div>
+      <div>
+        <BearBox/>
+      </div>
     </div>
   );
 }

@@ -1,25 +1,25 @@
 import {
-  DashboardOutlined,
-  UserOutlined,
-  UnorderedListOutlined,
-  UserAddOutlined,
-  SettingOutlined,
-  ProfileOutlined,
-  ToolOutlined,
-  LaptopOutlined,
-  InsertRowLeftOutlined,
   BankOutlined,
-  TruckOutlined,
+  CommentOutlined,
+  DashboardOutlined,
   DollarOutlined,
   FileTextOutlined,
   FrownOutlined,
-  TransactionOutlined,
   FundProjectionScreenOutlined,
   FundViewOutlined,
+  InsertRowLeftOutlined,
+  LaptopOutlined,
+  ProfileOutlined,
   ReadOutlined,
-  CommentOutlined,
+  SettingOutlined,
+  TeamOutlined,
   ThunderboltOutlined,
-  TeamOutlined
+  ToolOutlined,
+  TransactionOutlined,
+  TruckOutlined,
+  UnorderedListOutlined,
+  UserAddOutlined,
+  UserOutlined
 } from "@ant-design/icons";
 import React from "react";
 
