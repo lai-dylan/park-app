@@ -3,6 +3,7 @@ import React, {useState} from "react";
 import {Button, Form, Input, message} from "antd";
 import {useNavigate} from "react-router-dom";
 import {login} from "@/api/user.ts";
+import useUserStore from "@/store/userStore.tsx";
 
 type FieldType = {
   username: string,
@@ -24,6 +25,8 @@ const Login: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const navigate = useNavigate();
 
+  const setUserState = useUserStore((state) => state.setUserState);
+
   const handleLogin = async () => {
     try {
       setLoading(true);
@@ -35,7 +38,13 @@ const Login: React.FC = () => {
         password
       });
 
-      localStorage.setItem("token", result.data.token);
+      setUserState({
+        token: result.data.token,
+        userInfo: {
+          username: result.data.username,
+        }
+      })
+
       message.success("登录成功");
       setTimeout(() => {
         navigate("/", {replace: true});

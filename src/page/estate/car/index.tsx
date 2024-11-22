@@ -1,11 +1,11 @@
 import React from "react";
 
-const Estate: React.FC = () => {
+const Car: React.FC = () => {
   return (
     <div>
-      estate
+      Car
     </div>
   );
 };
 
-export default Estate;
+export default Car;

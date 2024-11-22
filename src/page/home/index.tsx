@@ -4,6 +4,7 @@ import {Layout, theme} from "antd";
 import XMenu from "@/components/xMenu";
 import XBreadcrumb from "@/components/xBreadcrumb";
 import XHeader from "@/components/xHeader";
+import {Outlet} from "react-router-dom";
 
 const {Header, Content, Sider} = Layout;
 
@@ -41,7 +42,7 @@ const Home: React.FC = () => {
               borderRadius: borderRadiusLG,
             }}
           >
-            Bill is a cat.
+            <Outlet/>
           </div>
         </Content>
       </Layout>

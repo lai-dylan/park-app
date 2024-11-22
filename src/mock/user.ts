@@ -14,7 +14,7 @@ Mock.mock("https://www.demo.com/login", "post", (options: any) => {
       data: {
         username: "赵铁柱",
         token: "mocktoken123456admin",
-        btnAuth: ["add", "edit", "delete"]
+        // btnAuth: ["add", "edit", "delete"]
       }
     };
   } else if (username === "manager" && password === "manager") {
@@ -24,7 +24,7 @@ Mock.mock("https://www.demo.com/login", "post", (options: any) => {
       data: {
         username: "manager",
         token: "mocktoken123456manager",
-        btnAuth: ["add", "edit"]
+        // btnAuth: ["add", "edit"]
       }
     };
   } else if (username == "user" && password === "user") {
@@ -34,14 +34,14 @@ Mock.mock("https://www.demo.com/login", "post", (options: any) => {
       data: {
         username: "user",
         token: "mocktoken123456user",
-        btnAuth: ["add"]
+        // btnAuth: ["add"]
       }
     };
   } else {
     return {
       code: 401,
       message: "用户名或密码有误",
-      data: ""
+      data: null
     };
   }
 });
@@ -50,7 +50,7 @@ Mock.mock("https://www.demo.com/login", "post", (options: any) => {
  * 菜单接口
  */
 Mock.mock("https://www.demo.com/menu", "get", () => {
-  const token = localStorage.getItem("token");
+  const token = "mocktoken123456admin";
 
   if (token == "mocktoken123456admin") {
     return {

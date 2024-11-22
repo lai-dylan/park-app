@@ -1,5 +1,6 @@
 import React, {useEffect} from "react";
 import {useNavigate} from "react-router-dom";
+import useUserStore from "@/store/userStore.tsx";
 
 type Params = {
   requireLogin?: boolean,
@@ -9,7 +10,7 @@ type Params = {
 
 function RequireAuth({requireLogin = true, to = "/login", children}: Params) {
   const navigate = useNavigate();
-  const isLogin = !!localStorage.getItem("token");
+  const isLogin = !!useUserStore((state) => state.token);
 
   useEffect(() => {
     if (requireLogin && !isLogin) {
