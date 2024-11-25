@@ -4,6 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "front": "vite",
+    "back": "npx nodemon ./backend/app.js",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
