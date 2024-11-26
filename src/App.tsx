@@ -1,4 +1,4 @@
-import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import {createBrowserRouter, Navigate, RouterProvider} from "react-router-dom";
 import {Suspense, useEffect, useState} from "react";
 import {Spin} from "antd";
 import {getMenu} from "@/api/user.ts";
@@ -22,6 +22,10 @@ function App() {
 
     const rootRoute = routes.find((route) => route.path === "/");
     rootRoute!["children"] = generatedRoutes;
+    rootRoute!["children"].unshift({
+      path: "/",
+      element: <Navigate to="/dashboard" replace/>,
+    });
 
     const buildRouter = createBrowserRouter(routes);
     setGeneratedRouter(buildRouter);

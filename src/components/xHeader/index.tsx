@@ -1,6 +1,7 @@
 import React from "react";
 import {DownOutlined, LogoutOutlined, UserOutlined} from "@ant-design/icons";
 import {Dropdown, MenuProps, message, Space} from "antd";
+import useUserStore from "@/store/userStore.tsx";
 
 
 const items: MenuProps["items"] = [
@@ -35,6 +36,8 @@ const onClick = ({key}: any) => {
 };
 
 const XHeader: React.FC = () => {
+  const username = useUserStore(state => state.userInfo.username);
+
   return <div style={{paddingRight: "20px", textAlign: "right"}}>
     <Dropdown menu={{items, onClick}}>
       <a onClick={(e) => {
@@ -42,7 +45,7 @@ const XHeader: React.FC = () => {
         console.log(e.target);
       }}>
         <Space>
-          欢迎👏🏻，{`Dylan`}
+          {username}
           <DownOutlined/>
         </Space>
       </a>

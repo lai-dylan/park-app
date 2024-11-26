@@ -1,28 +1,9 @@
 import React from "react";
 import {Breadcrumb} from "antd";
-import {UserOutlined, HomeOutlined} from "@ant-design/icons";
 import useSystemStore from "@/store/systemStore.tsx";
 import {MenuBackend} from "@/components/xMenu";
 import {useLocation} from "react-router-dom";
-
-const items = [
-  {
-    href: "",
-    title: <HomeOutlined/>,
-  },
-  {
-    href: "",
-    title: (
-      <>
-        <UserOutlined/>
-        <span>Application List</span>
-      </>
-    ),
-  },
-  {
-    title: "Application",
-  },
-];
+import {buildPathArray} from "@/utils/stringHelper.ts";
 
 interface Item {
   href: React.Key;
@@ -30,20 +11,15 @@ interface Item {
 }
 
 const _buildItems = (menuList: MenuBackend[], result: Item[]) => {
-  console.log(menuList);
-
   menuList.forEach((menu: MenuBackend) => {
-    const hasChildren = menu.children !== undefined && menu.children !== null;
-
     result.push({
       href: menu.key,
       title: menu.label
     });
 
-    if (hasChildren) {
+    if (menu.children) {
       _buildItems(menu.children || [], result);
     }
-
   });
 };
 
@@ -54,15 +30,12 @@ const buildItems = (menuList: MenuBackend[]): Item[] => {
 };
 
 const XBreadcrumb: React.FC = () => {
-
   const {pathname} = useLocation();
-  const prefix = "/" + pathname.split("/")[1];
+  const pathArr = buildPathArray(pathname);
 
-  const menuList = useSystemStore((state) => state.menuList);
-  const filteredList = menuList.filter((item: MenuBackend) => (item.key as string).startsWith(prefix));
-
-  const items = buildItems(filteredList);
-
+  const filteredList = useSystemStore((state) => state.menuList)
+    .filter((item: MenuBackend) => (item.key as string).startsWith(pathArr[0]));
+  const items = buildItems(filteredList).filter(item => pathArr.includes(item.href as string));
 
   return <Breadcrumb items={items as any} style={{margin: "16px 0"}}/>;
 };
