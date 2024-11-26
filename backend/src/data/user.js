@@ -1,4 +1,15 @@
-const menuList = [
+const userData = {
+  code: 200,
+  message: "test",
+  data: [
+    {
+      id: 1,
+      username: "test"
+    }
+  ]
+};
+
+const adminMenuList = [
   {
     "icon": "DashboardOutlined",
     "label": "工作台",
@@ -298,5 +309,9 @@ const managerMenuList = [
   }
 ];
 
-
-export {menuList, userMenuList, managerMenuList};
+module.exports = {
+  userData,
+  adminMenuList,
+  userMenuList,
+  managerMenuList
+};

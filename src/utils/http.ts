@@ -3,7 +3,7 @@ import {message} from "antd";
 
 const http: AxiosInstance = axios.create({
   // baseURL: process.env.REACT_APP_API_URL,
-  baseURL: "https://www.demo.com",
+  baseURL: "http://localhost:3000",
   timeout: 5000
 });
 
