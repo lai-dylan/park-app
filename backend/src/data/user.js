@@ -15,6 +15,81 @@ const adminMenuList = [
     "label": "工作台",
     "key": "/dashboard",
   },
+  {
+    "icon": "DashboardOutlined",
+    "label": "工作台",
+    "key": "/dashboard",
+  },
+  {
+    "icon": "DashboardOutlined",
+    "label": "工作台",
+    "key": "/dashboard",
+  },
+  {
+    "icon": "DashboardOutlined",
+    "label": "工作台",
+    "key": "/dashboard",
+  },
+  {
+    "icon": "DashboardOutlined",
+    "label": "工作台",
+    "key": "/dashboard",
+  },
+  {
+    "icon": "DashboardOutlined",
+    "label": "工作台",
+    "key": "/dashboard",
+  },
+  {
+    "icon": "DashboardOutlined",
+    "label": "工作台",
+    "key": "/dashboard",
+  },
+  {
+    "icon": "DashboardOutlined",
+    "label": "工作台",
+    "key": "/dashboard",
+  },
+  {
+    "icon": "DashboardOutlined",
+    "label": "工作台",
+    "key": "/dashboard",
+  },
+  {
+    "icon": "DashboardOutlined",
+    "label": "工作台",
+    "key": "/dashboard",
+  },
+  {
+    "icon": "DashboardOutlined",
+    "label": "工作台",
+    "key": "/dashboard",
+  },
+  {
+    "icon": "DashboardOutlined",
+    "label": "工作台",
+    "key": "/dashboard",
+  },
+  {
+    "icon": "DashboardOutlined",
+    "label": "工作台",
+    "key": "/dashboard",
+  },
+  {
+    "icon": "DashboardOutlined",
+    "label": "工作台",
+    "key": "/dashboard",
+  },
+  {
+    "icon": "DashboardOutlined",
+    "label": "工作台",
+    "key": "/dashboard",
+  },
+  {
+    "icon": "DashboardOutlined",
+    "label": "工作台",
+    "key": "/dashboard",
+  },
   // {
   //
   //   "icon": "TeamOutlined",

@@ -1,0 +1,27 @@
+.layout {
+  /*min-height: 100vh;*/
+}
+
+.header {
+  padding: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.sider {
+  height: calc(100vh - 64px);
+  overflow-y: auto;
+  position: fixed;
+  left: 0;
+  top: 64px;
+  background-color: #ffffff;
+}
+
+.content {
+  min-width: 1080px;
+  margin: 64px 0 0 220px;
+  padding-right: 20px;
+  overflow-y: auto;
+  height: calc(100vh - 64px);
+}
