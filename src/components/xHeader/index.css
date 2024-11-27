@@ -1,0 +1,14 @@
+.x-header {
+  display: flex;
+  padding: 0 27px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.x-header h2 {
+  color: white;
+}
+
+.ant-space {
+  color: white;
+}

@@ -2,6 +2,7 @@ import React from "react";
 import {DownOutlined, LogoutOutlined, UserOutlined} from "@ant-design/icons";
 import {Dropdown, MenuProps, message, Space} from "antd";
 import useUserStore from "@/store/userStore.tsx";
+import "./index.css";
 
 
 const items: MenuProps["items"] = [
@@ -38,19 +39,22 @@ const onClick = ({key}: any) => {
 const XHeader: React.FC = () => {
   const username = useUserStore(state => state.userInfo.username);
 
-  return <div style={{paddingRight: "20px", textAlign: "right"}}>
-    <Dropdown menu={{items, onClick}}>
-      <a onClick={(e) => {
-        e.preventDefault();
-        console.log(e.target);
-      }}>
-        <Space>
-          {username}
-          <DownOutlined/>
-        </Space>
-      </a>
-    </Dropdown>
-  </div>;
+  return (
+    <div className="x-header">
+      <h2>Park APP</h2>
+      <Dropdown menu={{items, onClick}}>
+        <a onClick={(e) => {
+          e.preventDefault();
+          console.log(e.target);
+        }}>
+          <Space>
+            {username}
+            <DownOutlined/>
+          </Space>
+        </a>
+      </Dropdown>
+    </div>
+  );
 };
 
 export default XHeader;

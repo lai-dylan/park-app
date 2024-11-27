@@ -1,0 +1,10 @@
+.topStats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topStats-icon {
+  font-size: 40px;
+  color: #7da1f7;
+}

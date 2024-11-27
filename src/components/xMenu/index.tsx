@@ -34,7 +34,6 @@ const XMenu: React.FC = () => {
   };
 
   const initMenu = async () => {
-    // console.log(" await getMenu()");
     const result = await getMenu();
     const transformedMenuItems = handleMenuBackend(result.data);
     setMenuData(transformedMenuItems);
